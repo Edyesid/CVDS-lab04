@@ -1,6 +1,7 @@
 package hangman.model;
 
 public class BonusScore implements GameScore {
+	int puntaje;
 	/**
 	 * Calcula el score del juego de la manera power iniciando con 0 puntos y sumando 10 por correcta y restando 5 por incorrecta
 	 * @pre que el puntaje este en 0 puntos
@@ -12,9 +13,21 @@ public class BonusScore implements GameScore {
 	 * 
 	 */
 	@Override
-	public int CalculateScore(int CorrectCount, int incorrectCount) {
+	public int CalculateScore(int CorrectCount, int incorrectCount) throws Exception {
 		
-		return 0;
+		if(CorrectCount < 0 || incorrectCount < 0) {
+			throw new Exception(); 
+		}
+		
+		puntaje = 0;
+		
+		puntaje = (puntaje + (CorrectCount * 10)) - (incorrectCount * 5);
+		
+		if (puntaje < 0) {
+			puntaje = 0;
+		}
+		
+		return puntaje;
 	}
 
 }

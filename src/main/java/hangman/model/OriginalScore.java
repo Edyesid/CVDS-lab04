@@ -1,6 +1,7 @@
 package hangman.model;
 
 public class OriginalScore implements GameScore {
+	int puntaje;
 	/**
 	 * Calcula el score del juego de la manera original iniciando con 100 puntos y descontando 10 por cada letra mala
 	 * @pre que el puntaje este en 100 puntos
@@ -12,9 +13,18 @@ public class OriginalScore implements GameScore {
 	 * 
 	 */
 	@Override
-	public int CalculateScore(int CorrectCount, int incorrectCount) {
+	public int CalculateScore(int CorrectCount, int incorrectCount) throws Exception  {
+		puntaje = 100;
+		if(CorrectCount < 0 || incorrectCount < 0) {
+			throw new Exception(); 
+		}
 		
-		return 0;
+		puntaje = puntaje - (incorrectCount * 10);
+		
+		if (puntaje < 0) {
+			puntaje = 0;
+		}
+		return puntaje;
 	}
 
 }
