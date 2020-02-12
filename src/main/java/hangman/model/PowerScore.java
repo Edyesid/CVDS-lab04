@@ -7,17 +7,17 @@ public class PowerScore implements GameScore{
 	 * @pre que el puntaje este en 0
 	 * @pos puntaje minimo 0 puntos y el maximo 500 puntos
 	 * @param CorrectCount letras correctas
-	 * @param IncorrectCount letras incorrectas
+	 * @param incorrectCount letras incorrectas
 	 * @return puntaje del ususario en el modo original
 	 * @throws Exception
 	 * 
 	 */
 	
 	@Override
-	public int CalculateScore(int CorrectCount, int incorrectCount) throws Exception {
+	public int CalculateScore(int CorrectCount, int incorrectCount) throws HangmanException {
 		puntaje=0;
 		if(CorrectCount < 0 || incorrectCount < 0) {
-			throw new Exception(); 
+			throw new HangmanException(HangmanException.PARAMETROS_INVALIDOS);
 		}
 		
 		puntaje=(int) (puntaje+(Math.pow(5,CorrectCount)))-(8*incorrectCount);

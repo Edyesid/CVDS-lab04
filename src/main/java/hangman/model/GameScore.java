@@ -8,6 +8,6 @@ public interface GameScore {
 	 * @return puntaje obtenido por el usuario
 	 * @throws Exception 
 	 */
-	public int CalculateScore(int CorrectCount, int IncorrectCount) throws Exception;
+	public int CalculateScore(int CorrectCount, int IncorrectCount) throws HangmanException;
 
 }

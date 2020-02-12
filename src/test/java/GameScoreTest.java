@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 
+import hangman.model.HangmanException;
 import org.junit.Test;
 
 import hangman.model.BonusScore;
@@ -43,7 +44,7 @@ public class GameScoreTest {
 		try {
 			prueba.CalculateScore(-1,0);
 			
-		} catch (Exception e) {
+		} catch (HangmanException e) {
 			Assert.assertEquals(true,true);
 			
 		}
@@ -55,7 +56,7 @@ public class GameScoreTest {
 		try {
 			prueba.CalculateScore(0,-1);
 			
-		} catch (Exception e) {
+		} catch (HangmanException e) {
 			Assert.assertEquals(true,true);
 			
 		}
@@ -66,7 +67,7 @@ public class GameScoreTest {
 		OriginalScore prueba = new OriginalScore();
 		try {
 			Assert.assertEquals(0,prueba.CalculateScore(0,10));
-		} catch (Exception e) {
+		} catch (HangmanException e) {
 		
 		}
 	}
@@ -76,7 +77,7 @@ public class GameScoreTest {
 		OriginalScore prueba = new OriginalScore();
 		try {
 			Assert.assertEquals(0,prueba.CalculateScore(0,11));
-		} catch (Exception e) {
+		} catch (HangmanException e) {
 		}
 	}
 	
@@ -85,7 +86,7 @@ public class GameScoreTest {
 		OriginalScore prueba = new OriginalScore();
 		try {
 			Assert.assertEquals(0,prueba.CalculateScore(10,10));
-		} catch (Exception e) {}
+		} catch (HangmanException e) {}
 	}
 	
 	@Test
@@ -93,7 +94,7 @@ public class GameScoreTest {
 		OriginalScore prueba = new OriginalScore();
 		try {
 			Assert.assertEquals(50,prueba.CalculateScore(11,5));
-		} catch (Exception e) {}
+		} catch (HangmanException e) {}
 	}
 	
 	@Test
@@ -102,7 +103,7 @@ public class GameScoreTest {
 		try {
 			prueba.CalculateScore(-1,0);
 			
-		} catch (Exception e) {
+		} catch (HangmanException e) {
 			Assert.assertEquals(true,true);
 			
 		}
@@ -113,7 +114,7 @@ public class GameScoreTest {
 		try {
 			prueba.CalculateScore(0,-1);
 			
-		} catch (Exception e) {
+		} catch (HangmanException e) {
 			Assert.assertEquals(true,true);
 			
 		}

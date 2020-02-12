@@ -7,16 +7,16 @@ public class BonusScore implements GameScore {
 	 * @pre que el puntaje este en 0 puntos
 	 * @pos puntaje minimo 0 puntos
 	 * @param CorrectCount letras correctas
-	 * @param IncorrectCount letras incorrectas
+	 * @param incorrectCount letras incorrectas
 	 * @return puntaje del ususario en el modo original
 	 * @throws Exception
 	 * 
 	 */
 	@Override
-	public int CalculateScore(int CorrectCount, int incorrectCount) throws Exception {
+	public int CalculateScore(int CorrectCount, int incorrectCount) throws HangmanException {
 		
 		if(CorrectCount < 0 || incorrectCount < 0) {
-			throw new Exception(); 
+			throw new HangmanException(HangmanException.PARAMETROS_INVALIDOS);
 		}
 		
 		puntaje = 0;
