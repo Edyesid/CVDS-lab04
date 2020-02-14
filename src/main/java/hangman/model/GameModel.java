@@ -42,7 +42,7 @@ public class GameModel {
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        this.gameScore = gameScore;
+        this.gameScore = gamescore;
         puntaje = gameScore.CalculateScore(correctCount, incorrectCount);
         
     }
@@ -127,7 +127,7 @@ public class GameModel {
     //method: getGameScore
     //purpose: return current score
     public int getGameScore() throws HangmanException {
-        return gameScore.CalculateScore(correctCount, incorrectCount) ;;
+        return gameScore.CalculateScore(correctCount, incorrectCount) ;
     }
 
     //method: setGameScore
