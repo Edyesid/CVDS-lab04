@@ -1,3 +1,15 @@
+## Integrantes
+- Edwin Yesid Rodriguez Maldonado
+- Henry Alejandro Sánchez Arévalo
+
+## Resultados
+# Ejecutando en frances:
+![](https://i.ibb.co/fQVZNSy/Game.png)
+# Ejecutando en español:
+![](https://i.ibb.co/8DKR6Gp/Spanish.png)
+# Jugando en español modo PowerScore:
+![](https://i.ibb.co/mtCCdG7/Juego.jpg)
+
 ### Escuela Colombiana de Ingeniería
 
 ### Procesos de Desarrollo de Software
